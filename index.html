@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Information about RPG1 Backups, a private-use database backup utility using Google Drive.">
+  <meta name="robots" content="index,follow">
+  <title>RPG1 Backups — Personal Backup Utility</title>
+  <style>
+    :root { color-scheme: light; font: 17px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif; background:#f7f9fc; color:#1c293d; }
+    * { box-sizing: border-box; } body { margin:0; }
+    .wrap { width:min(760px,calc(100% - 36px)); margin:auto; }
+    header { padding:22px 0; border-bottom:1px solid #dfe6ef; background:white; }
+    .brand { font-weight:750; letter-spacing:-.025em; font-size:1.1rem; }
+    nav { float:right; font-size:.9rem; }
+    a { color:#1558a5; } a:hover { text-decoration-thickness:2px; }
+    main { padding:65px 0 74px; }
+    .eyebrow { text-transform:uppercase; letter-spacing:.13em; font-weight:750; color:#506986; font-size:.73rem; }
+    h1 { font-size:clamp(2.15rem,6vw,3.2rem); line-height:1.17; letter-spacing:-.04em; margin:12px 0 19px; }
+    h2 { font-size:1.25rem; margin-top:39px; }
+    p { margin:15px 0; } .lead { font-size:1.16rem; max-width:670px; color:#43546b; }
+    .panel { background:white; border:1px solid #dfe6ef; padding:22px 25px; border-radius:13px; margin-top:27px; }
+    ul { padding-left:23px; } li { margin:9px 0; }
+    footer { padding:20px 0 38px; border-top:1px solid #dfe6ef; font-size:.88rem; color:#56677d; }
+    @media(max-width:480px) { nav{float:none;display:block;margin-top:4px;} main{padding-top:39px;} }
+  </style>
+</head>
+<body>
+<header><div class="wrap"><span class="brand">RPG1 Backups</span><nav><a href="privacy.html">Privacy policy</a></nav></div></header>
+<main class="wrap">
+  <p class="eyebrow">Personal data backup utility</p>
+  <h1>RPG1 Backups</h1>
+  <p class="lead">A private-use utility for backing up the owner's RPG1 game-development SQLite database to the owner's Google Drive.</p>
+  <div class="panel">
+    <h2 style="margin-top:0">How it works</h2>
+    <ul>
+      <li>A local Linux server creates a SQLite backup and verifies its integrity.</li>
+      <li>The open-source <a href="https://rclone.org/">rclone</a> application uses Google OAuth authorization to upload dated backup files to the owner's Google Drive account.</li>
+      <li>The backup job is intended to run on a nightly schedule once configuration and a restore test are complete.</li>
+      <li>Database contents, login credentials and OAuth tokens are <strong>not</strong> hosted on this website or in this public source repository.</li>
+    </ul>
+  </div>
+  <h2>Who can use it?</h2>
+  <p>This is a utility for the operator's personal use. It is not a public backup service and does not offer registration or shared storage accounts.</p>
+  <h2>Access and control</h2>
+  <p>Google OAuth grants the authorized rclone client access according to the scopes selected during configuration. The backup process is intended to operate on a specified Google Drive backup folder; that destination folder is an operational setting, <strong>not necessarily an OAuth-enforced folder-only permission</strong>. The account owner can revoke access through <a href="https://myaccount.google.com/connections">Google Account third-party connections</a>.</p>
+  <p>For details about information handling, see the <a href="privacy.html">RPG1 Backups Privacy Policy</a>.</p>
+</main>
+<footer><div class="wrap">RPG1 Backups · Public application information only · <a href="https://github.com/DickWork/rpg1-backup-oauth">Source repository</a></div></footer>
+</body>
+</html>
