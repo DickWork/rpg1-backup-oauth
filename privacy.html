@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for the RPG1 Backups personal Google Drive backup application.">
+  <title>Privacy Policy — RPG1 Backups</title>
+  <style>
+    :root { color-scheme:light;font:17px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif;background:#f7f9fc;color:#1c293d; }
+    *{box-sizing:border-box} body{margin:0}
+    .wrap{width:min(760px,calc(100% - 36px));margin:auto}
+    header{padding:22px 0;border-bottom:1px solid #dfe6ef;background:white}
+    .brand{font-weight:750;font-size:1.1rem;letter-spacing:-.025em}
+    nav{float:right;font-size:.9rem} a{color:#1558a5}
+    main{padding:54px 0 75px}
+    h1{font-size:clamp(2.1rem,5vw,2.9rem);letter-spacing:-.04em;line-height:1.2}
+    h2{font-size:1.23rem;margin:34px 0 9px}
+    p{margin:13px 0} ul{padding-left:23px} li{margin:8px 0}
+    .date{font-size:.88rem;color:#53657b}
+    footer{padding:20px 0 38px;border-top:1px solid #dfe6ef;font-size:.87rem;color:#56677d}
+    @media(max-width:480px){nav{float:none;display:block;margin-top:4px}}
+  </style>
+</head>
+<body>
+<header><div class="wrap"><span class="brand">RPG1 Backups</span><nav><a href="index.html">Homepage</a></nav></div></header>
+<main class="wrap">
+  <h1>Privacy Policy</h1>
+  <p class="date">Effective October 10, 2026</p>
+  <p>RPG1 Backups is a personal-use utility intended to make verified copies of the operator's RPG1 SQLite development database and place those copies in the operator's own Google Drive. It is not a public service and does not accept public user registrations.</p>
+  <h2>Information accessed and processed</h2>
+  <p>When the owner authorizes the utility, rclone obtains Google OAuth credentials and may access Google Drive file names, identifiers, metadata and file content, according to the scopes granted. The local backup process reads the owner's specified RPG1 database and uploads generated backup files and verification information to the configured destination.</p>
+  <p>The operational configuration restricts intended uploads to the designated backup folder. Depending on the authorized OAuth scope, Google's permission grant may cover more than that folder. The owner should review the scope on Google's consent screen before approval.</p>
+  <h2>How information is used</h2>
+  <p>Google Drive access is used to create, check, list, retrieve and manage the owner's backup files as needed to maintain and restore backups. It is not used to profile users, deliver advertising or sell information. No RPG1 database or OAuth credential is published on this public website.</p>
+  <h2>Storage and security</h2>
+  <p>The working database and local snapshots reside on the owner's Linux machine. Remote copies reside in the owner's Google Drive account. OAuth authorization details are intended to be stored in an access-restricted rclone configuration on that machine, separate from the public GitHub repository and game-development code. The operator controls those resources and is responsible for securing, retaining and deleting backup copies.</p>
+  <h2>Sharing</h2>
+  <p>The utility does not intentionally distribute backup contents or Google credentials to third parties. Google processes authorized Drive API requests to provide Google Drive storage. GitHub hosts these informational webpages, and both platforms may process ordinary access logs according to their own policies. No advertising or third-party analytics have been intentionally added to these pages.</p>
+  <h2>Retention and deletion</h2>
+  <p>Backups are intended to be retained as dated versions under a schedule chosen by the owner. The owner may delete local or Google Drive backups at any time. Removing or revoking the rclone authorization stops future authorized Drive API access but does not automatically delete existing backups.</p>
+  <h2>Control and revocation</h2>
+  <p>The owner can review or revoke connected-app access using <a href="https://myaccount.google.com/connections">Google Account third-party connections</a>. Backup files can be managed directly in Google Drive. An authorized client may need to be configured again after revocation.</p>
+  <h2>Changes and contact</h2>
+  <p>This policy may be updated if the utility's actual backup implementation or scope of access changes. Changes will be published here. For questions about this informational project, contact the maintainer through the <a href="https://github.com/DickWork/rpg1-backup-oauth">public source repository</a>.</p>
+  <p><a href="index.html">Return to homepage</a></p>
+</main>
+<footer><div class="wrap">RPG1 Backups · Public application information only</div></footer>
+</body>
+</html>
